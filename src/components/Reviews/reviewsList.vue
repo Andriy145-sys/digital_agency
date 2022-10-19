@@ -2,9 +2,10 @@
   <v-col>
     <v-row justify="center">
       <reviews-card
-        v-for="review in reviewsList.slice(0, 4)"
+        v-for="review in reviewsList.slice($vuetify.breakpoint.xs ? (0, 4) : (0, 1))"
         :key="review.id"
         :review="review"
+        class="mb-10"
       />
     </v-row>
   </v-col>

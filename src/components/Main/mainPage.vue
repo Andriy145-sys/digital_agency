@@ -2,7 +2,7 @@
   <div class="main-background">
     <div class="main">
       <v-main>
-        <v-container>
+        <v-container v-if="!$vuetify.breakpoint.xs">
           <v-row no-gutters align="center">
             <v-col>
               <p class="whiteText">Logo company</p>

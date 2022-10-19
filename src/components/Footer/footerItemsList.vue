@@ -1,11 +1,35 @@
 <template>
-  <v-row justify="center" style="margin-top: 62px;">
-    <v-col class="px-10">
+  <v-row justify="center" style="margin-top: 62px">
+    <v-col class="ml-5">
       <v-row no-gutters justify="center">
-        <v-col cols="3" v-for="item in itemsList" :key="item.id">
-          <p style="color: white">{{ item.title }}</p>
+        <v-col
+          cols="12"
+          xl="2"
+          lg="2"
+          md="2"
+          sm="6"
+          v-for="item in itemsList"
+          :key="item.id"
+          style="margin-left: 36px;"
+        >
           <p
-            style="color: white; cursor: pointer"
+            style="
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 160%;
+              color: #ffffff;
+            "
+          >
+            {{ item.title }}
+          </p>
+          <p
+            style="
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 210%;
+              color: #dedede;
+              cursor: pointer;
+            "
             v-for="subitems in item.subitems"
             :key="subitems.id"
           >

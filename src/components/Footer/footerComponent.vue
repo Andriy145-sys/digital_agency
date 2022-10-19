@@ -2,7 +2,7 @@
   <v-footer class="backgroundFooter">
     <v-main style="padding: 0px">
       <v-container style="padding: 0px">
-        <v-row no-gutters align="end" justify="center">
+        <v-row no-gutters align="end" justify="center" v-if="!$vuetify.breakpoint.xs">
           <div
             style="
               width: 90px;
@@ -30,8 +30,8 @@
               font-size: 20px;
               line-height: 160%;
               color: #ffffff;
-              margin-left: 226px;
-              margin-right: 158px;
+              margin-left: 136px;
+              margin-right: 68px;
             "
           >
             Ready to Discuss Your Project ?
