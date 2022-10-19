@@ -1,0 +1,17 @@
+.whiteText {
+    color: white;
+}
+
+.componentSubtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #e20044;
+}
+
+.componentTitle {
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 140%;
+    color: #ffffff;
+}

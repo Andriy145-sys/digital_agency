@@ -1,0 +1,28 @@
+<template>
+  <div class="reviewsBackground">
+    <v-col style="text-align: center; padding-top: 32px;">
+      <p class="componentSubtitle">
+        WHAT DID THEY SAY ?
+      </p>
+      <p class="componentTitle">
+        TESTIMONIALS FROM OUR CLIENTS
+      </p>
+    </v-col>
+    <reviews-list />
+  </div>
+</template>
+
+<script>
+import reviewsList from "./reviewsList.vue";
+export default {
+  components: { reviewsList },
+};
+</script>
+
+<style>
+.reviewsBackground {
+  background-image: url("../../assets/img/reviewsBackground.png");
+  height: 574px;
+  background-size: cover;
+}
+</style>
