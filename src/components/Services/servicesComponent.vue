@@ -2,22 +2,18 @@
   <div style="background-color: #111111">
     <v-main>
       <v-container>
-        <v-row no-gutters style="margin-top: 83px;" class="ml-5">
-          <v-col cols="1" class="pt-3">
+        <v-row no-gutters :style="$vuetify.breakpoint.xs ? 'margin-top: 20px;' : 'margin-top: 83px'" class="ml-5">
+          <v-col cols="2" class="pt-3">
             <div class="cubeFirst"></div>
             <div class="cubeSecond"></div>
           </v-col>
-          <v-col cols="6">
-            <span style="font-weight: 500; font-size: 20px; color: #ffffff">
-              What can we do for you
-            </span>
-            <br>
-            <span style="font-weight: 600; font-size: 38px; color: #ffffff">
-              Services we provide for you
-            </span>
+          <v-col :class="$vuetify.breakpoint.xs ? 'pl-10 pt-3' : ''" cols="10" xl="6" lg="6" md="6" sm="6">
+            <span class="Title"> What can we do for you </span>
+            <br />
+            <span class="Subtitle"> Services we provide for you </span>
           </v-col>
         </v-row>
-        <services-list/>
+        <services-list />
       </v-container>
     </v-main>
   </div>
@@ -31,6 +27,30 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .Title {
+    font-weight: 500;
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .Subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+@media only screen and (min-width: 610px) {
+  .Title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  .Subtitle {
+    font-weight: 600;
+    font-size: 38px;
+    color: #ffffff;
+  }
+}
 .cubeFirst {
   width: 50px;
   height: 50px;

@@ -2,7 +2,7 @@
   <v-col>
     <v-row justify="center">
       <reviews-card
-        v-for="review in reviewsList.slice($vuetify.breakpoint.xs ? (0, 4) : (0, 1))"
+        v-for="review in reviewsList"
         :key="review.id"
         :review="review"
         class="mb-10"
@@ -43,14 +43,6 @@ export default {
       },
       {
         id: 4,
-        name: "Esther Howard",
-        img: "reviewsImg4.png",
-        coment:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A fringilla at gravida justo, felis risus ullamcorper augue tempus. Nam hac.",
-        rating: 5,
-      },
-      {
-        id: 5,
         name: "Esther Howard",
         img: "reviewsImg4.png",
         coment:
