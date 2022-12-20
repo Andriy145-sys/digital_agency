@@ -62,7 +62,7 @@
                 <p
                   style="
                     font-weight: 500;
-                    font-size: 24px;
+                    font-size: 24px; 
                     color: #000000;
                     line-height: 250%;
                   "
@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
 export default {
   data: () => ({
     headerItem: [
@@ -112,6 +113,26 @@ export default {
     ],
     activeItem: 0,
   }),
+  mounted() {
+    this.test();
+  },
+  methods: {
+    ...mapActions(["updateInfo"]),
+    test() {
+      this.updateInfo({
+        locale: "en",
+      });
+      setTimeout(this.addedRoute, 5000)
+    },
+    addedRoute(){
+      this.updateInfo({
+        locale: "ua",
+      });
+    }
+  },
+  computed: {
+    ...mapGetters(["user"]),
+  },
 };
 </script>
 
