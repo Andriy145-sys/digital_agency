@@ -6,5 +6,10 @@
     "header_contact": "Contact",
     "main_title": "",
     "main_description": "",
-    "main_btn": ""
+    "main_btn": "",
+    "develop_steps_title": "",
+    "develop_steps_description": "",
+    "call_me_back_title": "",
+    "call_me_back_description": "",
+    "order_consultation": "Order a consultation"
 }

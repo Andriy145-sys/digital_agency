@@ -1,6 +1,6 @@
 <template>
-  <v-col style="margin-top: 38px">
-    <v-row justify="center">
+  <v-col style="margin-top: 30px" class="py-0 px-0">
+    <v-row no-gutters justify="center">
       <service-card
         v-for="service in servicesList"
         :key="service.id"
@@ -18,55 +18,37 @@ export default {
     servicesList: [
       {
         id: 1,
-        title: "Creative Marketing & Advertsing",
+        title: "Створення сайтів",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },
       {
         id: 2,
-        title: "Creative Marketing & Advertsing",
+        title: "Розробка UI/UX дизайну",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },
       {
         id: 3,
-        title: "Creative Marketing & Advertsing",
+        title: "Просування сайту",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },
       {
         id: 4,
-        title: "Creative Marketing & Advertsing",
+        title: "Створення сайтів",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },
       {
         id: 5,
-        title: "Creative Marketing & Advertsing",
+        title: "Розробка UI/UX дизайну",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },
       {
         id: 6,
-        title: "Creative Marketing & Advertsing",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
-      },
-      {
-        id: 7,
-        title: "Creative Marketing & Advertsing",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
-      },
-      {
-        id: 8,
-        title: "Creative Marketing & Advertsing",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
-      },
-      {
-        id: 9,
-        title: "Creative Marketing & Advertsing",
+        title: "Просування сайту",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
       },

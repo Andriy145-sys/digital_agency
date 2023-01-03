@@ -1,18 +1,12 @@
 <template>
-  <v-card
-    width="332px"
-    height="232px"
-    color="#000000"
-    style="margin-bottom: 16px; margin-left: 16px; padding: 25px"
-  >
-    <v-icon color="#E20044" x-large>mdi-lightbulb-on-outline mdi-38px</v-icon
-    ><br /><br />
-    <p class="cardTitle">
-      {{ service.title }}
-    </p>
-    <p class="cardText">
-      {{ service.description }}
-    </p>
+  <v-card width="320px" height="300px" color="#000000" class="serviceCard">
+    <v-col class="px-0 py-0">
+      <v-row no-gutters justify="end">
+        <img src="@/assets/img/arrowRightTop.svg" />
+      </v-row>
+      <div class="numberService">0{{ service.id }}</div>
+      <span class="cardTitle">{{ service.title }}</span>
+    </v-col>
   </v-card>
 </template>
 
@@ -43,16 +37,30 @@ export default {
 }
 @media only screen and (min-width: 610px) {
   .cardTitle {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 140%;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    display: flex;
+    align-items: flex-end;
     color: #ffffff;
   }
-  .cardText {
-    font-weight: 400;
-    font-size: 11px;
-    line-height: 140%;
-    color: #ffffff;
+  .serviceCard {
+    margin-bottom: 50px;
+    margin-left: 35px;
+    padding: 25px;
+    border: 2px solid #ebebeb !important;
+    border-radius: 1px;
+  }
+  .numberService {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #5e5e5e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 100%;
   }
 }
 </style>

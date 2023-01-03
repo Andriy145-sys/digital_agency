@@ -4,15 +4,16 @@
       <v-main>
         <v-container>
           <v-row no-gutters align="center">
-            <v-col cols="2">
+            <v-col cols="3">
               <img
                 src="@/assets/img/logo.svg"
                 width="140px"
                 height="70px"
                 alt="logo"
+                @click="$emit('scrollTo', '#main')"
               />
             </v-col>
-            <v-col cols="7" class="px-0">
+            <v-col cols="6" class="px-0">
               <v-row justify="center" no-gutters>
                 <v-item-group
                   active-class="headerActiveItem"
@@ -25,7 +26,11 @@
                         :key="item.id"
                         v-slot="{ active, toggle }"
                       >
-                        <span class="headerItem" @click="toggle" v-if="!active">
+                        <span
+                          class="headerItem"
+                          @click="toggle, $emit('scrollTo', item.href)"
+                          v-if="!active"
+                        >
                           <span class="routerLink">
                             {{ item.title | localize }}
                           </span>
@@ -116,22 +121,22 @@ export default {
       {
         id: 1,
         title: "header_services",
-        href: "top",
+        href: "#services",
       },
       {
         id: 2,
         title: "header_about_us",
-        href: "abous_us",
+        href: "#abous_us",
       },
       {
         id: 3,
         title: "header_porfolio",
-        path: "porfolio",
+        href: "#porfolio",
       },
       {
         id: 4,
         title: "header_contact",
-        path: "contact",
+        href: "#contact",
       },
     ],
     activeItem: 0,
@@ -239,28 +244,6 @@ export default {
   line-height: 22px;
   margin-right: 10px;
   cursor: pointer;
-}
-
-.main_btn {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  margin-top: 30px;
-  font-weight: 400;
-  font-size: 18px !important;
-  line-height: 25px !important;
-  color: #232323;
-  text-transform: none;
-  background: #fea31e !important;
-}
-
-.main_btn:hover {
-  color: white;
-  background: #8a5200 !important;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  font-size: 18px !important;
-  line-height: 25px !important;
-  filter: drop-shadow(1px 4px 10px rgba(255, 255, 255, 0.3));
 }
 
 .activeLanguage {
