@@ -2,6 +2,17 @@
     color: white;
 }
 
+.phoneNumber {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+* {
+    font-family: 'MacPaw Fixel Display';
+}
+
 @media only screen and (max-width: 600px) {
     .componentSubtitle {
         font-weight: 600;

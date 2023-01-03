@@ -4,7 +4,7 @@
       <v-main>
         <v-container>
           <v-row no-gutters align="center">
-            <v-col>
+            <v-col cols="2">
               <img
                 src="@/assets/img/logo.svg"
                 width="140px"
@@ -12,67 +12,95 @@
                 alt="logo"
               />
             </v-col>
-            <v-col cols="4" class="px-0">
-              <v-row justify="end" no-gutters>
+            <v-col cols="7" class="px-0">
+              <v-row justify="center" no-gutters>
                 <v-item-group
                   active-class="headerActiveItem"
                   v-if="!$vuetify.breakpoint.xs"
                 >
                   <v-container>
-                    <v-row>
+                    <v-row no-gutters align="center">
                       <v-item
                         v-for="item in headerItem"
                         :key="item.id"
                         v-slot="{ active, toggle }"
                       >
-                        <p class="headerItem" @click="toggle" v-if="!active">
-                          <router-link class="routerLink" :to="item.path">{{
-                            item.title
-                          }}</router-link>
-                        </p>
-                        <p class="headerItem" @click="toggle" v-else>
-                          <router-link
-                            class="routerLinkActive"
-                            :to="item.path"
-                            >{{ item.title }}</router-link
-                          >
-                        </p>
+                        <span class="headerItem" @click="toggle" v-if="!active">
+                          <span class="routerLink">
+                            {{ item.title | localize }}
+                          </span>
+                        </span>
+                        <span class="headerItem" @click="toggle" v-else>
+                          <span class="routerLinkActive">
+                            {{ item.title | localize }}
+                          </span>
+                        </span>
                       </v-item>
                     </v-row>
                   </v-container>
                 </v-item-group>
               </v-row>
             </v-col>
-          </v-row>
-          <v-col cols="12" xl="6" lg="6" md="6" sm="6">
-            <span v-if="$vuetify.breakpoint.xs" class="mainTitle"
-              >bMax Software</span
-            >
-            <p v-else class="mainTitle">bMax Software</p>
-            <p class="mainDescription">
-              The customer is very important, the customer will be followed by
-              the customer. Now the lake, as the need in but for the eleifend of
-              the valley of life.
-            </p>
-          </v-col>
-          <div class="cube">
-            <v-row align="end" no-gutters>
-              <div class="firstCube">
-                <p class="textStyle">01</p>
-                <p
-                  style="
-                    font-weight: 500;
-                    font-size: 24px; 
-                    color: #000000;
-                    line-height: 250%;
+            <v-col cols="1">
+              <v-row no-gutters align="center">
+                <span
+                  class="language"
+                  :class="
+                    user.locale == 'ua' ? 'activeLanguage' : 'inactiveLanguage'
                   "
+                  @click="changeUserLocale('ua')"
                 >
-                  /3
-                </p>
-              </div>
-              <div class="secondCube"></div>
-              <div class="thirdCube"></div>
-            </v-row>
+                  ua
+                </span>
+                <span
+                  class="language"
+                  :class="
+                    user.locale == 'en' ? 'activeLanguage' : 'inactiveLanguage'
+                  "
+                  @click="changeUserLocale('en')"
+                >
+                  en
+                </span>
+              </v-row>
+            </v-col>
+            <v-col cols="2">
+              <span class="phoneNumber">
+                <a
+                  style="text-decoration: none; color: white"
+                  href="tel: +380986504542"
+                  >+38 (098) 650 45 42</a
+                >
+              </span>
+            </v-col>
+          </v-row>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              width: 100%;
+              min-height: 500px;
+              max-height: 685px;
+            "
+          >
+            <v-col cols="12" xl="3" lg="5" md="6" sm="6">
+              <span v-if="$vuetify.breakpoint.xs" class="mainTitle">{{
+                "main_title" | localize
+              }}</span>
+              <p v-else class="mainTitle">{{ "main_title" | localize }}</p>
+              <p class="mainDescription">
+                {{ "main_description" | localize }}
+              </p>
+              <v-btn width="300px" height="45px" class="main_btn">
+                <v-col cols="11" style="text-align: center">
+                  {{ "main_btn" | localize }}
+                </v-col>
+                <v-col cols="1">
+                  <v-row no-gutters align="center" justify="end">
+                    <v-icon small> mdi-arrow-top-right </v-icon>
+                  </v-row>
+                </v-col>
+              </v-btn>
+            </v-col>
           </div>
         </v-container>
       </v-main>
@@ -87,48 +115,34 @@ export default {
     headerItem: [
       {
         id: 1,
-        title: "Home page",
-        path: "/",
+        title: "header_services",
+        href: "top",
       },
       {
         id: 2,
-        title: "Program",
-        path: "/program",
+        title: "header_about_us",
+        href: "abous_us",
       },
       {
         id: 3,
-        title: "About Us",
-        path: "/about_us",
+        title: "header_porfolio",
+        path: "porfolio",
       },
       {
         id: 4,
-        title: "Blog",
-        path: "/blog",
-      },
-      {
-        id: 5,
-        title: "Contact",
-        path: "/contact",
+        title: "header_contact",
+        path: "contact",
       },
     ],
     activeItem: 0,
   }),
-  mounted() {
-    this.test();
-  },
   methods: {
     ...mapActions(["updateInfo"]),
-    test() {
+    changeUserLocale(locale) {
       this.updateInfo({
-        locale: "en",
+        locale: locale,
       });
-      setTimeout(this.addedRoute, 5000)
     },
-    addedRoute(){
-      this.updateInfo({
-        locale: "ua",
-      });
-    }
   },
   computed: {
     ...mapGetters(["user"]),
@@ -166,34 +180,6 @@ export default {
       #000000 116.71%
     );
   }
-  .cube {
-    margin-top: 120px;
-    margin-left: 15px;
-  }
-  .firstCube {
-    width: 88px;
-    height: 88px;
-    background: #e20044;
-    display: flex;
-    padding: 25px;
-    position: absolute;
-    z-index: 10;
-  }
-  .secondCube {
-    width: 80px;
-    height: 68px;
-    background: rgba(226, 0, 68, 0.5);
-    position: absolute;
-    z-index: 5;
-    margin-left: 20px;
-  }
-  .thirdCube {
-    width: 20px;
-    height: 48px;
-    position: absolute;
-    background: rgba(226, 0, 68, 0.2);
-    margin-left: 100px;
-  }
   .textStyle {
     font-weight: 700;
     font-size: 20px;
@@ -203,16 +189,16 @@ export default {
 }
 @media only screen and (min-width: 610px) {
   .mainTitle {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 64px;
-    line-height: 96px;
+    line-height: 88px;
+    text-transform: uppercase;
     color: #ffffff;
-    margin-top: 100px !important;
   }
   .mainDescription {
     font-weight: 400;
-    font-size: 16px;
-    line-height: 160%;
+    font-size: 20px;
+    line-height: 28px;
     color: #ffffff;
   }
   .main-background {
@@ -231,34 +217,7 @@ export default {
       #000000 116.71%
     );
   }
-  .cube {
-    margin-top: 245px;
-    margin-left: 20px;
-  }
-  .firstCube {
-    width: 128px;
-    height: 128px;
-    background: #e20044;
-    display: flex;
-    padding: 25px;
-    position: absolute;
-    z-index: 10;
-  }
-  .secondCube {
-    width: 120px;
-    height: 108px;
-    background: rgba(226, 0, 68, 0.5);
-    position: absolute;
-    z-index: 5;
-    margin-left: 20px;
-  }
-  .thirdCube {
-    width: 20px;
-    height: 88px;
-    position: absolute;
-    background: rgba(226, 0, 68, 0.2);
-    margin-left: 140px;
-  }
+
   .textStyle {
     font-weight: 700;
     font-size: 48px;
@@ -268,8 +227,47 @@ export default {
 }
 .headerItem {
   color: white;
+  margin-right: 32px;
+  cursor: pointer;
+}
+
+.language {
+  font-family: "MacPaw Fixel Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.main_btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 18px !important;
+  line-height: 25px !important;
+  color: #232323;
+  text-transform: none;
+  background: #fea31e !important;
+}
+
+.main_btn:hover {
+  color: white;
+  background: #8a5200 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 18px !important;
+  line-height: 25px !important;
+  filter: drop-shadow(1px 4px 10px rgba(255, 255, 255, 0.3));
+}
+
+.activeLanguage {
+  color: #ffffff;
+}
+.inactiveLanguage {
+  color: #727272;
 }
 .routerLink {
   text-decoration: none;
@@ -279,7 +277,7 @@ export default {
   line-height: 17px;
 }
 .routerLinkActive {
-  color: #e20044 !important;
+  color: #fea31e !important;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
