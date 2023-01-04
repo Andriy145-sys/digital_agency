@@ -20,6 +20,7 @@
         src="@/assets/img/oval.svg"
         style="width: 100%; z-index: 40; margin-top: 0px"
       />
+      <examples-of-work-component style="margin-top: 100px" id="portfolio" />
       <contacts-component style="margin-top: 100px" id="contact" />
     </div>
   </div>
@@ -31,6 +32,7 @@ import ServicesComponent from "../Services/servicesComponent.vue";
 import DevelopStepsComponent from "../developSteps/developStepsComponent.vue";
 import CallMeBackComponent from "../callMeBack/callMeBackComponent.vue";
 import ContactsComponent from "../Contacts/contactsComponent.vue";
+import ExamplesOfWorkComponent from "../examplesOfWork/examplesOfWorkComponent.vue";
 export default {
   components: {
     mainPage,
@@ -38,6 +40,7 @@ export default {
     DevelopStepsComponent,
     CallMeBackComponent,
     ContactsComponent,
+    ExamplesOfWorkComponent,
   },
   methods: {
     scrollTo(id) {

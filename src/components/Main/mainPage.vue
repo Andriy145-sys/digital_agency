@@ -87,14 +87,16 @@
               max-height: 685px;
             "
           >
-            <v-col cols="12" xl="3" lg="5" md="6" sm="6">
+            <v-col cols="12" xl="3" lg="7" md="6" sm="6">
               <span v-if="$vuetify.breakpoint.xs" class="mainTitle">{{
                 "main_title" | localize
               }}</span>
               <p v-else class="mainTitle">{{ "main_title" | localize }}</p>
-              <p class="mainDescription">
-                {{ "main_description" | localize }}
-              </p>
+              <v-col cols="7" class="px-0">
+                <p class="mainDescription">
+                  {{ "main_description" | localize }}
+                </p>
+              </v-col>
               <v-btn width="300px" height="45px" class="main_btn">
                 <v-col cols="11" style="text-align: center">
                   {{ "main_btn" | localize }}
@@ -130,8 +132,8 @@ export default {
       },
       {
         id: 3,
-        title: "header_porfolio",
-        href: "#porfolio",
+        title: "header_portfolio",
+        href: "#portfolio",
       },
       {
         id: 4,
