@@ -3,11 +3,16 @@
     absolute
     right
     v-model="isNavigationDrawer"
-    width="720px"
-    height="100vh"
+    :width="$vuetify.breakpoint.xs ? '100%' : '720px'"
+    :height="$vuetify.breakpoint.xs ? '100%' : '100vh'"
     style="z-index: 100"
   >
-    <v-card color="#F3F1F5" width="720px" height="100vh" style="padding: 30px">
+    <v-card
+      color="#F3F1F5"
+      :width="$vuetify.breakpoint.xs ? '100%' : '720px'"
+      :height="$vuetify.breakpoint.xs ? '140%' : '100vh'"
+      style="padding: 30px"
+    >
       <v-row no-gutters justify="end">
         <v-icon
           style="cursor: pointer"
@@ -38,8 +43,8 @@
         />
       </v-col>
       <div
+        :style="$vuetify.breakpoint.xs ? 'margin-top: 100px;' : 'bottom: 50px'"
         style="
-          bottom: 50px;
           position: absolute;
           display: flex;
           justify-content: center;
@@ -105,18 +110,35 @@ export default {
 </script>
 
 <style>
-.drawerHeadText {
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 88px;
-  text-transform: uppercase;
-  color: #0d0d0d;
+@media only screen and (max-width: 600px) {
+  .drawerHeadText {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #0d0d0d;
+  }
+  .drawerSubHeadText {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0d0d0d;
+  }
 }
-.drawerSubHeadText {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 28px;
-  color: #0d0d0d;
+@media only screen and (min-width: 610px) {
+  .drawerHeadText {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 88px;
+    text-transform: uppercase;
+    color: #0d0d0d;
+  }
+  .drawerSubHeadText {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #0d0d0d;
+  }
 }
 .iconBackground {
   display: flex;

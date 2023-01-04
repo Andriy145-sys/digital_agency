@@ -2,7 +2,7 @@
   <v-col>
     <v-row no-gutters align="center">
       <v-text-field
-        style="padding-right: 10px"
+        :style="$vuetify.breakpoint.xs ? '' : 'padding-right: 10px'"
         dense
         outlined
         label="Ваше ім’я"
@@ -18,7 +18,7 @@
         :error-messages="nameError"
       />
       <v-text-field
-        style="padding-left: 10px"
+        :style="$vuetify.breakpoint.xs ? '' : 'padding-left: 10px'"
         dense
         outlined
         label="Номер телефону"
@@ -37,7 +37,7 @@
     </v-row>
     <v-row no-gutters align="center">
       <v-text-field
-        style="padding-right: 10px"
+        :style="$vuetify.breakpoint.xs ? '' : 'padding-right: 10px'"
         dense
         outlined
         label="Ваш Email"
@@ -53,7 +53,7 @@
         :error-messages="emailError"
       />
       <v-text-field
-        style="padding-left: 10px"
+        :style="$vuetify.breakpoint.xs ? '' : 'padding-left: 10px'"
         dense
         outlined
         label="Назва компанії"
@@ -77,9 +77,9 @@
       height="80px"
       v-model="user.project_description"
     />
-    <v-row no-gutters justify="end">
+    <v-row no-gutters :justify="$vuetify.breakpoint.xs ? 'center' : 'end'">
       <v-btn
-        width="220px"
+        :width="$vuetify.breakpoint.xs ? '100%' : '220px'"
         height="45px"
         class="main_btn"
         style="margin-top: 10px"
@@ -131,7 +131,7 @@ export default {
       this.$v.$touch();
       if (!this.$v.$invalid) {
         console.log(this.user);
-        this.$emit('successSendMessage')
+        this.$emit("successSendMessage");
       }
     },
   },
@@ -195,7 +195,6 @@ export default {
 .error_text-field fieldset {
   color: #a10909 !important;
   border-radius: 20px;
-  background-color: #f5f5f5 !important;
 }
 .error_text-field .error--text {
   color: #a10909 !important;
@@ -204,11 +203,9 @@ export default {
 .success_text-field fieldset {
   color: #fea31e !important;
   border-radius: 20px;
-  background-color: #f5f5f5 !important;
 }
 .text_field {
   color: #0d0d0d !important;
   border-radius: 20px;
-  background-color: #f5f5f5 !important;
 }
 </style>
