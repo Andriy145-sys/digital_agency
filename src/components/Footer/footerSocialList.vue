@@ -54,6 +54,7 @@ export default {
     color: #0d0d0d;
     margin-left: 20px;
     margin-bottom: 10px;
+    cursor: pointer;
   }
 }
 @media only screen and (min-width: 610px) {
@@ -63,6 +64,7 @@ export default {
     line-height: 22px;
     color: #0d0d0d;
     margin-left: 20px;
+    cursor: pointer;
   }
 }
 </style>
