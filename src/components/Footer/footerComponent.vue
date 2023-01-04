@@ -4,7 +4,7 @@
       <v-main>
         <v-container>
           <v-row no-gutters align="center" v-if="!$vuetify.breakpoint.xs">
-            <v-col>
+            <v-col cols="6">
               <v-row no-gutters align="center" justify="start">
                 <v-icon small color="#0d0d0d" style="margin-right: 10px">
                   mdi-copyright
@@ -23,7 +23,9 @@
                 </span>
               </v-row>
             </v-col>
-            <v-col> </v-col>
+            <v-col cols="6">
+              <footer-social-list />
+            </v-col>
           </v-row>
           <v-col v-else>
             <footer-social-list />

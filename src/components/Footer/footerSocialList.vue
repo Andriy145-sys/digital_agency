@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" no-gutters align="center">
+  <v-row justify="end" no-gutters align="center">
     <span class="socialName" v-for="social in social" :key="social.id">
       {{ social.title }}
     </span>
