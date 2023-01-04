@@ -3,7 +3,25 @@
     <mainPage @scrollTo="scrollTo" id="main" />
     <services-component id="services" />
     <develop-steps-component />
-    <call-me-back-component id="contact" />
+    <call-me-back-component />
+    <div style="background-color: white; margin: 0px; padding: 0px">
+      <div
+        style="
+          background-color: #030303;
+          position: absolute;
+          width: 100%;
+          height: 1px;
+          color: transparent;
+        "
+      >
+        d
+      </div>
+      <img
+        src="@/assets/img/oval.svg"
+        style="width: 100%; z-index: 40; margin-top: 0px"
+      />
+      <contacts-component style="margin-top: 100px" id="contact" />
+    </div>
   </div>
 </template>
 
@@ -12,12 +30,14 @@ import mainPage from "@/components/Main/mainPage";
 import ServicesComponent from "../Services/servicesComponent.vue";
 import DevelopStepsComponent from "../developSteps/developStepsComponent.vue";
 import CallMeBackComponent from "../callMeBack/callMeBackComponent.vue";
+import ContactsComponent from "../Contacts/contactsComponent.vue";
 export default {
   components: {
     mainPage,
     ServicesComponent,
     DevelopStepsComponent,
     CallMeBackComponent,
+    ContactsComponent,
   },
   methods: {
     scrollTo(id) {
