@@ -37,17 +37,19 @@
 
 @media only screen and (max-width: 600px) {
     .componentSubtitle {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 140%;
-        color: #e20044;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+
     }
 
     .componentTitle {
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 140%;
-        color: #ffffff;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 50px;
+        text-transform: uppercase;
+        color: #FFFFFF;
     }
 }
 

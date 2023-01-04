@@ -14,7 +14,8 @@
     "order_consultation": "Замовити консультацію",
     "contact_form_head_text": "Розкажіть нам свою ідею сайту",
     "contact_form_sub_head_text": "Отримайте детальну та зрозумілу відповідь щодо втілення вашої ідеї",
-    "contact_form_head_success_text" : "Дякуємо, що обрали нас",
-    "contact_form_sub_head_success_text" : "Найближчим часом наш менеджер зв’яжиться з Вами для уточнення деталей.",
-    "btn_send": "Надіслати"
+    "contact_form_head_success_text": "Дякуємо, що обрали нас",
+    "contact_form_sub_head_success_text": "Найближчим часом наш менеджер зв’яжиться з Вами для уточнення деталей.",
+    "btn_send": "Надіслати",
+    "label_menu": "Меню"
 }

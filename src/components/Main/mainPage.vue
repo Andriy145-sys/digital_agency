@@ -6,6 +6,15 @@
           <v-row no-gutters align="center">
             <v-col cols="3">
               <img
+                v-if="$vuetify.breakpoint.xs"
+                src="@/assets/img/logo.svg"
+                width="80px"
+                height="40px"
+                alt="logo"
+                @click="$emit('scrollTo', '#main')"
+              />
+              <img
+                v-else
                 src="@/assets/img/logo.svg"
                 width="140px"
                 height="70px"
@@ -46,7 +55,7 @@
                 </v-item-group>
               </v-row>
             </v-col>
-            <v-col cols="1">
+            <v-col cols="1" v-if="!$vuetify.breakpoint.xs">
               <v-row no-gutters align="center">
                 <span
                   class="language"
@@ -68,7 +77,7 @@
                 </span>
               </v-row>
             </v-col>
-            <v-col cols="2">
+            <v-col cols="2" v-if="!$vuetify.breakpoint.xs">
               <span class="phoneNumber">
                 <a
                   style="text-decoration: none; color: white"
@@ -77,6 +86,23 @@
                 >
               </span>
             </v-col>
+            <v-row
+              no-gutters
+              justify="end"
+              v-if="$vuetify.breakpoint.xs"
+              @click="$emit('showMobileNavigationDrawer')"
+            >
+              <span
+                style="
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 19px;
+                  color: #ffffff;
+                "
+                >{{ "label_menu" | localize }}</span
+              >
+              <v-icon color="white" style="margin-left: 10px">mdi-menu</v-icon>
+            </v-row>
           </v-row>
           <div
             style="
@@ -86,32 +112,38 @@
               min-height: 500px;
               max-height: 685px;
             "
+            :style="$vuetify.breakpoint.xs ? ' padding-top: 190px;' : ''"
           >
             <v-col cols="12" xl="3" lg="7" md="6" sm="6">
               <span v-if="$vuetify.breakpoint.xs" class="mainTitle">{{
                 "main_title" | localize
               }}</span>
               <p v-else class="mainTitle">{{ "main_title" | localize }}</p>
-              <v-col cols="7" class="px-0">
+              <v-col cols="12" xl="7" lg="7" md="7" sm="12" class="px-0">
                 <p class="mainDescription">
                   {{ "main_description" | localize }}
                 </p>
               </v-col>
-              <v-btn
-                width="300px"
-                height="45px"
-                class="main_btn"
-                @click="$emit('showContactForm')"
+              <v-row
+                no-gutters
+                :justify="$vuetify.breakpoint.xs ? 'center' : 'start'"
               >
-                <v-col cols="11" style="text-align: center">
-                  {{ "main_btn" | localize }}
-                </v-col>
-                <v-col cols="1">
-                  <v-row no-gutters align="center" justify="end">
-                    <v-icon small> mdi-arrow-top-right </v-icon>
-                  </v-row>
-                </v-col>
-              </v-btn>
+                <v-btn
+                  width="300px"
+                  height="45px"
+                  class="main_btn"
+                  @click="$emit('showContactForm')"
+                >
+                  <v-col cols="11" style="text-align: center">
+                    {{ "main_btn" | localize }}
+                  </v-col>
+                  <v-col cols="1">
+                    <v-row no-gutters align="center" justify="end">
+                      <v-icon small> mdi-arrow-top-right </v-icon>
+                    </v-row>
+                  </v-col>
+                </v-btn>
+              </v-row>
             </v-col>
           </div>
         </v-container>
@@ -165,20 +197,22 @@ export default {
 <style>
 @media only screen and (max-width: 600px) {
   .mainTitle {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 96px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    text-transform: uppercase;
     color: #ffffff;
-    margin-top: 10px;
   }
   .mainDescription {
+    font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 22px;
     color: #ffffff;
   }
   .main-background {
     background-image: url("../../assets/img/mainBackground.png");
-    height: 363px;
+    height: 659px;
     background-size: cover;
   }
   .main {

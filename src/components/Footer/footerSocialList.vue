@@ -1,16 +1,6 @@
 <template>
   <v-row justify="center" no-gutters align="center">
-    <span
-      style="
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 22px;
-        color: #0d0d0d;
-        margin-left: 20px;
-      "
-      v-for="social in social"
-      :key="social.id"
-    >
+    <span class="socialName" v-for="social in social" :key="social.id">
       {{ social.title }}
     </span>
   </v-row>
@@ -56,4 +46,23 @@ export default {
 </script>
 
 <style>
+@media only screen and (max-width: 600px) {
+  .socialName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0d0d0d;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (min-width: 610px) {
+  .socialName {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #0d0d0d;
+    margin-left: 20px;
+  }
+}
 </style>

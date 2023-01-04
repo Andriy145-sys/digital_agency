@@ -4,6 +4,7 @@
       @scrollTo="scrollTo"
       id="main"
       @showContactForm="$emit('showContactForm')"
+      @showMobileNavigationDrawer="$emit('showMobileNavigationDrawer')"
     />
     <services-component id="services" />
     <develop-steps-component />
@@ -24,7 +25,12 @@
         src="@/assets/img/oval.svg"
         style="width: 100%; z-index: 40; margin-top: 0px"
       />
-      <examples-of-work-component style="margin-top: 100px" id="portfolio" />
+      <examples-of-work-component
+        :style="
+          $vuetify.breakpoint.xs ? 'margin-top: 50px' : 'margin-top: 100px'
+        "
+        id="portfolio"
+      />
       <contacts-component style="margin-top: 100px" id="contact" />
     </div>
   </div>
@@ -46,9 +52,24 @@ export default {
     ContactsComponent,
     ExamplesOfWorkComponent,
   },
+  props: {
+    scrollId: {
+      require: false,
+    },
+  },
   methods: {
     scrollTo(id) {
       this.$vuetify.goTo(id);
+    },
+  },
+  watch: {
+    scrollId: {
+      deep: true,
+      handler() {
+        if (this.$vuetify.breakpoint.xs && this.scrollId !== "") {
+          this.scrollTo(this.scrollId);
+        }
+      },
     },
   },
 };

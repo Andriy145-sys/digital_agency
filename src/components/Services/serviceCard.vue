@@ -34,6 +34,23 @@ export default {
     line-height: 140%;
     color: #ffffff;
   }
+  .serviceCard {
+    margin-bottom: 50px;
+    padding: 25px;
+    border: 2px solid #ebebeb !important;
+    border-radius: 1px;
+  }
+  .numberService {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #5e5e5e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 610px) {
   .cardTitle {
