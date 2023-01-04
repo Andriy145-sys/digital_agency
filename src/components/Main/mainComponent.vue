@@ -31,7 +31,11 @@
         "
         id="portfolio"
       />
-      <contacts-component style="margin-top: 100px" id="contact" />
+      <contacts-component
+        style="margin-top: 100px"
+        id="contact"
+        @showContactForm="$emit('showContactForm')"
+      />
     </div>
   </div>
 </template>

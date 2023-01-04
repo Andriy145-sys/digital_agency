@@ -51,7 +51,7 @@
             sm="12"
             :style="$vuetify.breakpoint.xs ? 'text-align: center;' : ''"
           >
-            <v-btn width="300px" height="45px" class="main_btn">
+            <v-btn width="300px" height="45px" class="main_btn" @click="$emit('showContactForm')">
               <v-col cols="11" style="text-align: center">
                 {{ "main_btn" | localize }}
               </v-col>
