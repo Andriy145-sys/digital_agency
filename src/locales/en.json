@@ -11,5 +11,10 @@
     "develop_steps_description": "",
     "call_me_back_title": "",
     "call_me_back_description": "",
-    "order_consultation": "Order a consultation"
+    "order_consultation": "Order a consultation",
+    "contact_form_head_text": "",
+    "contact_form_sub_head_text": "",
+    "contact_form_head_success_text": "",
+    "contact_form_sub_head_success_text": "",
+    "btn_send": "Send"
 }

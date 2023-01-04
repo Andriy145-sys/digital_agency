@@ -7,11 +7,12 @@ import vuetify from '@/plugins/vuetify'
 import './assets/layouts/index.css'
 import store from './store';
 import localizeFilter from './filters/localize.filter'
+import VueMask from 'v-mask'
 
 Vue.config.productionTip = false
 
 Vue.filter('localize', localizeFilter)
-
+Vue.use(VueMask);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

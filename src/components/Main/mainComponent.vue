@@ -1,6 +1,10 @@
 <template>
   <div>
-    <mainPage @scrollTo="scrollTo" id="main" />
+    <mainPage
+      @scrollTo="scrollTo"
+      id="main"
+      @showContactForm="$emit('showContactForm')"
+    />
     <services-component id="services" />
     <develop-steps-component />
     <call-me-back-component />

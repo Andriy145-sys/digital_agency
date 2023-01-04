@@ -97,7 +97,12 @@
                   {{ "main_description" | localize }}
                 </p>
               </v-col>
-              <v-btn width="300px" height="45px" class="main_btn">
+              <v-btn
+                width="300px"
+                height="45px"
+                class="main_btn"
+                @click="$emit('showContactForm')"
+              >
                 <v-col cols="11" style="text-align: center">
                   {{ "main_btn" | localize }}
                 </v-col>
