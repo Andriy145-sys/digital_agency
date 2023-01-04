@@ -47,7 +47,6 @@ export default {
 
 <style>
 .backgroundFooter {
-  background: white;
-  padding: 50px 0px 50px 0px;
+  background: white !important;
 }
 </style>
