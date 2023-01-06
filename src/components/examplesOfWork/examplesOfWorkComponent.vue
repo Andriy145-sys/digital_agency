@@ -22,7 +22,7 @@
           <v-row
             no-gutters
             align="center"
-            :justify="$vuetify.breakpoint.xs ? 'center' : ''"
+            :justify="$vuetify.breakpoint.xs ? 'center' : 'start'"
             style="margin-top: 50px"
           >
             <div class="swiper-button-prev" style="position: static"></div>
