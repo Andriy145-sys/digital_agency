@@ -223,21 +223,25 @@ export default {
     line-height: 22px;
     color: #ffffff;
   }
-  .main-background {
-    background-image: url("../../assets/img/mainBackground.png");
-    height: 659px;
-    background-size: cover;
+  .yellowLine {
+    animation: spinYellowLine 6s linear infinite;
+    margin-top: 100px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
   }
-  .main {
-    height: 363px;
-    background: linear-gradient(
-      90.6deg,
-      #000000 1.24%,
-      rgba(0, 0, 0, 0.71) 39.93%,
-      rgba(0, 0, 0, 0.88) 86.25%,
-      #171214 116.71%,
-      #000000 116.71%
-    );
+  .redLine {
+    animation: spinRedLine 6s linear infinite;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    margin-top: 150px;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
   }
   .textStyle {
     font-weight: 700;
@@ -260,8 +264,6 @@ export default {
     line-height: 28px;
     color: #ffffff;
   }
-  .main-background {
-  }
   .yellowLine {
     animation: spinYellowLine 6s linear infinite;
     margin-top: 50px;
@@ -275,7 +277,7 @@ export default {
     width: 370px;
     height: 370px;
     object-fit: cover;
-    margin-top: 170px;
+    margin-top: 160px;
     overflow: hidden;
     transition-duration: 0.8s;
     transition-property: transform;
