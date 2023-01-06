@@ -1,5 +1,18 @@
 <template>
   <div class="main-background">
+    <div
+      style="
+        display: flex;
+        width: 100%;
+        height: 663px;
+        justify-content: center;
+        align-content: center;
+        position: absolute;
+      "
+    >
+      <img class="yellowLine" src="@/assets/img/mainBackgroundYellowLine.svg" />
+      <img class="redLine" src="@/assets/img/mainBackgroundRedLine.svg" />
+    </div>
     <div class="main">
       <v-main>
         <v-container>
@@ -248,27 +261,42 @@ export default {
     color: #ffffff;
   }
   .main-background {
-    background-image: url("../../assets/img/mainBackground.png");
-    height: 663px;
-    background-size: cover;
   }
-  .main {
-    height: 663px;
-    background: linear-gradient(
-      90.6deg,
-      #000000 1.24%,
-      rgba(0, 0, 0, 0.71) 39.93%,
-      rgba(0, 0, 0, 0.88) 86.25%,
-      #171214 116.71%,
-      #000000 116.71%
-    );
+  .yellowLine {
+    animation: spinYellowLine 6s linear infinite;
+    margin-top: 50px;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
   }
-
+  .redLine {
+    animation: spinRedLine 6s linear infinite;
+    position: absolute;
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
+    margin-top: 170px;
+    overflow: hidden;
+    transition-duration: 0.8s;
+    transition-property: transform;
+  }
   .textStyle {
     font-weight: 700;
     font-size: 48px;
     line-height: 160%;
     color: #31000f;
+  }
+}
+@keyframes spinYellowLine {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinRedLine {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
 .headerItem {
