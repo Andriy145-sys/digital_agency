@@ -67,7 +67,7 @@
               <v-col cols="11" style="text-align: center">
                 {{ "order_consultation" | localize }}
               </v-col>
-              <v-col cols="1">
+              <v-col cols="1" class="pt-4">
                 <v-row no-gutters align="center" justify="end">
                   <v-icon small> mdi-arrow-top-right </v-icon>
                 </v-row>

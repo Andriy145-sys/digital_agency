@@ -87,7 +87,7 @@
       >
         <v-row justify="center" no-gutters align="center">
           {{ "btn_send" | localize }}
-          <v-icon small style="margin-left: 10px"> mdi-arrow-top-right </v-icon>
+          <v-icon small style="margin-left: 10px;"> mdi-arrow-top-right </v-icon>
         </v-row>
       </v-btn>
     </v-row>
