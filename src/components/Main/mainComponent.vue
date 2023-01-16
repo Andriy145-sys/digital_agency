@@ -8,6 +8,7 @@
     />
     <services-component id="services" />
     <develop-steps-component />
+    <about-us-component id="abous_us" />
     <call-me-back-component />
     <div style="background-color: white; margin: 0px; padding: 0px">
       <div
@@ -47,6 +48,7 @@ import DevelopStepsComponent from "../developSteps/developStepsComponent.vue";
 import CallMeBackComponent from "../callMeBack/callMeBackComponent.vue";
 import ContactsComponent from "../Contacts/contactsComponent.vue";
 import ExamplesOfWorkComponent from "../examplesOfWork/examplesOfWorkComponent.vue";
+import AboutUsComponent from "../aboutUs/aboutUsComponent.vue";
 export default {
   components: {
     mainPage,
@@ -55,6 +57,7 @@ export default {
     CallMeBackComponent,
     ContactsComponent,
     ExamplesOfWorkComponent,
+    AboutUsComponent,
   },
   props: {
     scrollId: {
