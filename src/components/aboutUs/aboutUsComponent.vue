@@ -2,7 +2,7 @@
   <v-main>
     <v-container>
       <v-col class="px-0">
-        <p class="componentTitle">чому обирають нас</p>
+        <p class="componentTitle">{{ 'why_they_choose_us' | localize }}</p>
         <div class="aboutUsText">
           <div
             v-html="$options.filters.localize('about_us_before_ul_text')"

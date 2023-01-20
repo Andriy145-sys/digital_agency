@@ -14,14 +14,13 @@
           "
         >
           <v-col cols="12" xl="6" lg="6" md="6" sm="12" class="white--text">
-            <span class="componentTitle">наші Контакти</span>
+            <span class="componentTitle">{{ "our_contact" | localize }}</span>
             <p class="contact_text">
-              Ми завжді раді замовленням, новим пропозиціям та відгукам наших
-              клієнтів
+              {{ "our_contact_description" | localize }}
             </p>
             <v-row no-gutters align="start" style="margin-top: 30px">
               <v-col cols="12" xl="6" lg="6" md="6" sm="12">
-                <p class="sectionSubtitle">Телефон:</p>
+                <p class="sectionSubtitle">{{ "label_phone" | localize }}</p>
                 <span v-for="i in 3" :key="i" class="contact_item"
                   >+38 (098) 650 45 42 <br
                 /></span>
@@ -34,12 +33,14 @@
                 sm="12"
                 :style="$vuetify.breakpoint.xs ? 'margin-top: 30px;' : ''"
               >
-                <p class="sectionSubtitle">напишіть нам:</p>
+                <p class="sectionSubtitle">
+                  {{ "label_write_to_us" | localize }}
+                </p>
                 <p class="contact_item">beemax.compani@gmail.com</p>
               </v-col>
             </v-row>
             <p class="sectionSubtitle" style="margin-top: 30px">
-              Відвідайте нас:
+              {{ "label_visit_us" | localize }}
             </p>
             <p class="contact_item">м. коломия, вул. Відродження 22а</p>
           </v-col>
@@ -51,7 +52,12 @@
             sm="12"
             :style="$vuetify.breakpoint.xs ? 'text-align: center;' : ''"
           >
-            <v-btn width="300px" height="45px" class="main_btn" @click="$emit('showContactForm')">
+            <v-btn
+              width="300px"
+              height="45px"
+              class="main_btn"
+              @click="$emit('showContactForm')"
+            >
               <v-col cols="11" style="text-align: center">
                 {{ "main_btn" | localize }}
               </v-col>

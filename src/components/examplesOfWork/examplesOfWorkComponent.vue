@@ -4,7 +4,7 @@
       <v-row no-gutters align="start" justify="center">
         <v-col cols="12" xl="4" lg="4" md="4" sm="12">
           <p class="componentTitle" style="color: black">
-            приклади наших робіт
+            {{ 'example_of_our_work' | localize }}
           </p>
           <swiper
             class="swiper d-block d-md-none"
