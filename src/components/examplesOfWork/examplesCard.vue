@@ -36,7 +36,7 @@
           color: #0d0d0d;
         "
       >
-        {{ item.title }}
+        {{ user.locale == "ua" ? item.title_ua : item.title_en }}
       </p>
       <p
         style="
@@ -47,16 +47,20 @@
           color: #4f4f4f;
         "
       >
-        {{ item.text }}
+        {{ user.locale == "ua" ? item.text_ua : item.text_en }}
       </p>
     </v-card>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   props: {
     item: {},
+  },
+  computed: {
+    ...mapGetters(["user"]),
   },
 };
 </script>

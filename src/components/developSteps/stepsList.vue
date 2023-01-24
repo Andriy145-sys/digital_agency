@@ -37,6 +37,11 @@ export default {
         title: "develop_step_title_5",
         description: "develop_step_description_5",
       },
+      {
+        id: 6,
+        title: "develop_step_title_6",
+        description: "develop_step_description_6",
+      },
     ],
   }),
 };
