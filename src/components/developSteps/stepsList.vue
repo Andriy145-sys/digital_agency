@@ -14,33 +14,28 @@ export default {
     developSteps: [
       {
         id: 1,
-        title: "Аналіз ринку",
-        description:
-          "Вивчення конкурентів;Дослідження цільової аудиторії:Визначення завдань та цілей продукту та чіткий план його розробки",
+        title: "develop_step_title_1",
+        description: "develop_step_description_1",
       },
       {
         id: 2,
-        title: "Створення дизайну та архітектури",
-        description:
-          "Вивчення конкурентів; Дослідження цільової аудиторії: <br />Визначення завдань та цілей продукту та чіткий план його розробкипродукту та чіткий план його розробки",
+        title: "develop_step_title_2",
+        description: "develop_step_description_2",
       },
       {
         id: 3,
-        title: "Розробка",
-        description:
-          "Вивчення конкурентів; Дослідження цільової аудиторії:<br />Визначення завдань та цілей ",
+        title: "develop_step_title_3",
+        description: "develop_step_description_3",
       },
       {
         id: 4,
-        title: "Тестування",
-        description:
-          "Вивчення конкурентів;Дослідження цільової аудиторії: <br />Визначення завдань та цілей продукту та чіткий план його розробкипродукту та чіткий план його розробки",
+        title: "develop_step_title_4",
+        description: "develop_step_description_4",
       },
       {
         id: 5,
-        title: "Впровадження та супровід",
-        description:
-          "Вивчення крнкурентів;Дослідження цільової аудиторії:<br />Визначення завдань та цілей продукту та чіткий план його розробки",
+        title: "develop_step_title_5",
+        description: "develop_step_description_5",
       },
     ],
   }),

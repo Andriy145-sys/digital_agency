@@ -21,9 +21,19 @@
             <v-row no-gutters align="start" style="margin-top: 30px">
               <v-col cols="12" xl="6" lg="6" md="6" sm="12">
                 <p class="sectionSubtitle">{{ "label_phone" | localize }}</p>
-                <span v-for="i in 3" :key="i" class="contact_item"
-                  >+38 (098) 650 45 42 <br
-                /></span>
+                <span class="contact_item">
+                  <a
+                    style="text-decoration: none; color: white; cursor: pointer"
+                    href="tel: +380639344328"
+                    >+38 (063) 934 43 28 <br /> </a
+                ></span>
+                <span class="contact_item">
+                  <a
+                    style="text-decoration: none; color: white; cursor: pointer"
+                    href="tel: +380977291012"
+                    >+38 (097) 729 10 12 <br
+                  /></a>
+                </span>
               </v-col>
               <v-col
                 cols="12"
@@ -36,7 +46,13 @@
                 <p class="sectionSubtitle">
                   {{ "label_write_to_us" | localize }}
                 </p>
-                <p class="contact_item">beemax.compani@gmail.com</p>
+                <p class="contact_item">
+                  <a
+                    style="text-decoration: none; color: white; cursor: pointer"
+                    href="mailto: info@bmax.com"
+                    >info@bmax.com</a
+                  >
+                </p>
               </v-col>
             </v-row>
             <p class="sectionSubtitle" style="margin-top: 30px">

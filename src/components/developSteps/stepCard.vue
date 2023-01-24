@@ -1,11 +1,11 @@
 <template>
   <v-card class="stepCard" color="black">
-    <v-row no-gutters align="center" v-if="!$vuetify.breakpoint.xs">
+    <v-row no-gutters align="start" v-if="!$vuetify.breakpoint.xs">
       <v-col cols="2">
         <span class="stepNumber">0{{ step.id }}</span>
       </v-col>
       <v-col cols="10">
-        <span class="stepTitle">{{ step.title }}</span>
+        <span class="stepTitle">{{ step.title | localize }}</span>
       </v-col>
     </v-row>
     <v-col cols="12" v-if="$vuetify.breakpoint.xs" class="py-0">
@@ -19,9 +19,12 @@
       class="px-0 py-0"
       v-if="$vuetify.breakpoint.xs"
     >
-      <span class="stepTitle">{{ step.title }}</span>
+      <span class="stepTitle">{{ step.title | localize }}</span>
     </v-col>
-    <p class="stepDescription" v-html="step.description"></p>
+    <p
+      class="stepDescription"
+      v-html="$options.filters.localize(step.description)"
+    ></p>
   </v-card>
 </template>
 

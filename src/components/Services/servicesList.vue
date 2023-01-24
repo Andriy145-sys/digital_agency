@@ -18,39 +18,27 @@ export default {
     servicesList: [
       {
         id: 1,
-        title: "Створення сайтів",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_1",
       },
       {
         id: 2,
-        title: "Розробка UI/UX дизайну",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_2",
       },
       {
         id: 3,
-        title: "Просування сайту",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_3",
       },
       {
         id: 4,
-        title: "Створення сайтів",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_4",
       },
       {
         id: 5,
-        title: "Розробка UI/UX дизайну",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_5",
       },
       {
         id: 6,
-        title: "Просування сайту",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu sed suspendisse in pulvinar. Amet, amet, eleifend lacinia consectetur. In.",
+        title: "services_step_6",
       },
     ],
   }),

@@ -94,8 +94,8 @@
               <span class="phoneNumber">
                 <a
                   style="text-decoration: none; color: white"
-                  href="tel: +380986504542"
-                  >+38 (098) 650 45 42</a
+                  href="tel: +380639344328"
+                  >+38 (063) 934 43 28</a
                 >
               </span>
             </v-col>

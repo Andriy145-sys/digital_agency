@@ -5,7 +5,7 @@
         <img src="@/assets/img/arrowRightTop.svg" />
       </v-row>
       <div class="numberService">0{{ service.id }}</div>
-      <span class="cardTitle">{{ service.title }}</span>
+      <span class="cardTitle">{{ service.title | localize }}</span>
     </v-col>
   </v-card>
 </template>

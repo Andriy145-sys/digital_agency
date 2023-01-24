@@ -27,5 +27,21 @@
     "our_contact_description": "МИ ЗАВЖДІ РАДІ ЗАМОВЛЕННЯМ, НОВИМ ПРОПОЗИЦІЯМ ТА ВІДГУКАМ НАШИХ КЛІЄНТІВ",
     "label_phone": "ТЕЛЕФОН:",
     "label_write_to_us": "Напишіть нам:",
-    "label_visit_us": "Відвідайте нас:"
+    "label_visit_us": "Відвідайте нас:",
+    "services_step_1": "Розробка сайтів",
+    "services_step_2": "Розробка UI/UX дизайну",
+    "services_step_3": "Просування сайту",
+    "services_step_4": "Підтримка сайтів",
+    "services_step_5": "Домен/хостинг підтримка",
+    "services_step_6": "Розробка додаткових модулів, опцій",
+    "develop_step_title_1": "Аналіз ринку",
+    "develop_step_title_2": "Створення дизайну та архітектури",
+    "develop_step_title_3": "Розробка",
+    "develop_step_title_4": "Тестування",
+    "develop_step_title_5": "Впровадження та супровід",
+    "develop_step_description_1": "",
+    "develop_step_description_2": "",
+    "develop_step_description_3": "",
+    "develop_step_description_4": "",
+    "develop_step_description_5": ""
 }
